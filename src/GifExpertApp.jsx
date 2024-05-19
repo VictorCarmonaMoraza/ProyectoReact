@@ -7,6 +7,14 @@ export const GifExpertApp = () => {
 
     console.log(categories);
 
+    const  onAddCategory=()=>{
+         console.log('Valorant');
+         //Forma1
+         setCategories([ ...categories,'Valorant']);
+         //Forma2
+         //setCategories(cat=>[...cat,'Valorant'])
+    }
+
     return (
         <>
             {/* titulo de la aplicacion */}
@@ -16,6 +24,7 @@ export const GifExpertApp = () => {
 
 
             {/*Listado de Gif */}
+            <button onClick={onAddCategory}>Agregar</button>
             <ol>
                 {categories.map(category => {
                     return <li key={category}>{category}</li>
